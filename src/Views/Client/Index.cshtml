@@ -1,4 +1,29 @@
-﻿@{
+﻿@model IEnumerable<EatAndDrink.Models.Client>
+
+@{
     ViewData["Title"] = "Clients Page";
 }
 <h1>Привет! Это страница Clients</h1>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Phone Number</th>
+        <th>Address</th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.FirstName</td>
+            <td>@item.LastName</td>
+            <td>@item.PhoneNumber</td>
+            <td>@item.Address</td>
+        </tr>
+    }
+</table>
+<hr />
