@@ -3,7 +3,17 @@
 @{
     ViewData["Title"] = "Clients Page";
 }
+<style>
+  a {
+        text-decoration: none;
+  }
+</style>
 <h1>Привет! Это страница Clients</h1>
+
+<button>
+    <a asp-controller="Client" asp-action="New">  <font color="black"> <b>New Client</b>  </font> </a>
+</button>
+
 
 <table>
     <tr>
@@ -12,6 +22,7 @@
         <th>Surname</th>
         <th>Phone Number</th>
         <th>Address</th>
+        <th colspan ="2">Action</th>
     </tr>
 
 
@@ -23,7 +34,32 @@
             <td>@item.LastName</td>
             <td>@item.PhoneNumber</td>
             <td>@item.Address</td>
+
+            <td> <button><a asp-controller="Client" asp-action="Edit" asp-route-id="@item.Id"> <font color="black"> <b>Edit</b>  </font></a></button></td>
+            <td> <button><a asp-controller="Client" asp-action="Delete" asp-route-id="@item.Id"> <font color="black"> <b>Delete</b></font></a></button></td>
         </tr>
     }
 </table>
 <hr />
+
+@*<style>
+    button {
+        background: #008EB0; /* Синий цвет фона */
+        color: #fff; /* Белый цвет текста */
+        border: none; /* Убираем рамку */
+        padding: 1rem 1.5rem; /* Поля вокруг текста */
+        margin-bottom: 1rem; /* Отступ снизу */
+    }
+
+    .green {
+        background: #73A353;
+    }
+
+    .red {
+        background: #C1172C;
+    }
+
+    .orange {
+        background: #F7941E;
+    }
+</style>*@

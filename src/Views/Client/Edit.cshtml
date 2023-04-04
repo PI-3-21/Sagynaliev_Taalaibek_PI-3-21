@@ -1,0 +1,16 @@
+﻿@model EatAndDrink.Models.Client
+
+@{
+    ViewData["Title"] = "Update Client";
+}
+
+<form asp-controller="Client" asp-action="Update" asp-method="post">
+    <input asp-for="Id" hidden />
+    <label asp-for="FirstName"></label>:<input asp-for="FirstName" /><br />
+    <label asp-for="LastName"></label>:<input asp-for="LastName" /><br />
+    <label asp-for="PhoneNumber"></label>:<input asp-for="PhoneNumber" /><br />
+    <label asp-for="Address"></label>:<input asp-for="Address" /><br />
+
+    <button>Update</button>
+</form>
+
