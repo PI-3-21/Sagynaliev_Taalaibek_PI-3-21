@@ -15,20 +15,20 @@
 </button>
 
 
-<table>
-    <tr>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Surname</th>
-        <th>Phone Number</th>
-        <th>Address</th>
-        <th colspan ="2">Action</th>
+<table class="table table-hover">
+    <tr class="table-danger">
+        <td>Id</td>
+        <td >Name</td>
+        <td >Surname</td>
+        <td>Phone Number</td>
+        <td >Address</td>
+        <td colspan="2">Action</td>
     </tr>
 
 
     @foreach (var item in Model)
     {
-        <tr>
+        <tr class="table-info">
             <td>@item.Id</td>
             <td>@item.FirstName</td>
             <td>@item.LastName</td>
@@ -42,24 +42,3 @@
 </table>
 <hr />
 
-@*<style>
-    button {
-        background: #008EB0; /* Синий цвет фона */
-        color: #fff; /* Белый цвет текста */
-        border: none; /* Убираем рамку */
-        padding: 1rem 1.5rem; /* Поля вокруг текста */
-        margin-bottom: 1rem; /* Отступ снизу */
-    }
-
-    .green {
-        background: #73A353;
-    }
-
-    .red {
-        background: #C1172C;
-    }
-
-    .orange {
-        background: #F7941E;
-    }
-</style>*@
