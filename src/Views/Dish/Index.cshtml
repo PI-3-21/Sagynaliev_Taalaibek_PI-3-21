@@ -1,4 +1,40 @@
-﻿@{
+﻿@model IEnumerable<EatAndDrink.Models.Dish>
+
+@{
     ViewData["Title"] = "Dish Page";
 }
+<style>
+    a {
+        text-decoration: none;
+    }
+</style>
+
 <h1>Привет! Это страница Dish</h1>
+
+<button>
+    <a asp-controller="Dish" asp-action="New">  <font color="black"> <b>New Dish</b>  </font> </a>
+</button>
+
+
+<table class="table table-hover">
+    <tr class="table-danger">
+        <td>Id</td>
+        <td>Name</td>
+        <td>Price</td>
+        <td colspan="2">Action</td>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr class="table-info">
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Price</td>
+
+            <td> <button><a asp-controller="Dish" asp-action="Edit" asp-route-id="@item.Id"> <font color="black"> <b>Edit</b>  </font></a></button></td>
+            <td> <button><a asp-controller="Dish" asp-action="Delete" asp-route-id="@item.Id"> <font color="black"> <b>Delete</b></font></a></button></td>
+        </tr>
+    }
+</table>
+<hr />

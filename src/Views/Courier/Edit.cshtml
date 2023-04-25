@@ -1,0 +1,21 @@
+﻿@model EatAndDrink.Models.Courier
+
+@{
+    ViewData["Title"] = "Update Courier";
+}
+
+<form asp-controller="Courier" asp-action="Update" asp-method="post">
+    <div class="mb-3">
+        <Label asp-for="FirstName" class="form-label">First Name</Label>
+        <input asp-for="FirstName" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <Label asp-for="LastName" class="form-label">Last Name</Label>
+        <input asp-for="LastName" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <Label asp-for="PhoneNumber" class="form-label">Phone Number</Label>
+        <input asp-for="PhoneNumber" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-secondary">Update</button>
+</form>

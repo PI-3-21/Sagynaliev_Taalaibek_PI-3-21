@@ -1,0 +1,17 @@
+﻿@model EatAndDrink.Models.Dish
+
+@{
+    ViewData["Title"] = "Update Dish";
+}
+
+<form asp-controller="Client" asp-action="Update" asp-method="post">
+    <div class="mb-3">
+        <Label asp-for="Name" class="form-label">Name</Label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <Label asp-for="Price" class="form-label">Name</Label>
+        <input asp-for="Price" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-secondary">Update</button>
+</form>

@@ -1,0 +1,17 @@
+﻿@model EatAndDrink.Controllers.DishController.DishCreateViewModel
+
+@{
+    ViewData["Title"] = "New Dish";
+}
+
+<form asp-controller="Dish" asp-action="Create" asp-method="post">
+    <div class="mb-3">
+        <Label asp-for="Name" style="font-weight:bold" class="form-label">Name</Label>
+        <input asp-for="Name" style="background-color:bisque" id="Name" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <Label asp-for="Price" style="font-weight:bold" class="form-label">Price</Label>
+        <input asp-for="Price" style="background-color:bisque" id="Price" class="form-control" />
+    </div>
+    <button type="submit" style="font-weight:bold" class="btn btn-secondary">Create</button>
+</form>

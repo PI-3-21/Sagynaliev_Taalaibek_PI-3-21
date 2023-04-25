@@ -1,0 +1,27 @@
+﻿@model EatAndDrink.Controllers.CourierController.CourierCreateViewModel
+
+@{
+    ViewData["Title"] = "New Courier";
+}
+
+<form asp-controller="Courier" asp-action="Create" asp-method="post">
+    <div class="mb-3">
+        <Label asp-for="FirstName" style="font-weight:bold" class="form-label">First Name</Label>
+        <input asp-for="FirstName" style="background-color:bisque" id="FirstName" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <Label asp-for="LastName" style="font-weight:bold" class="form-label">Last Name</Label>
+        <input asp-for="LastName" style="background-color:bisque" id="LastName" class="form-control" />
+    </div>
+    <div class="row mb-3">
+        <label for="staticNumber" style="font-weight:bold" class="col-sm-3 col-form-label">Example of PhoneNumber</label>
+        <div style="background-color:red" class="col-sm-2">
+            <input type="text" readonly class="form-control-plaintext" id="PhoneNumber" value="+996505601100">
+        </div>
+    </div>
+    <div class="mb-3">
+        <Label asp-for="PhoneNumber" style="font-weight:bold" class="form-label">Phone Number</Label>
+        <input asp-for="PhoneNumber" style="background-color:bisque" class="form-control" />
+    </div>
+    <button type="submit" style="font-weight:bold" class="btn btn-secondary">Create</button>
+</form>
